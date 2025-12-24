@@ -5,11 +5,353 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pptx変換ツール</title>
     <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script type="module" src="exportSlides.js"></script>
   </head>
   <body class="bg-gray-100 p-8">
-    <div class="slide w-[1920px] h-[1080px]">test</div>
+    <!-- タイトルスライド -->
+    <div
+      class="slide w-[1920px] h-[1080px] bg-gradient-to-br from-blue-600 to-purple-700 flex flex-col items-center justify-center text-white mb-8 relative"
+    >
+      <h1 class="text-8xl font-bold mb-8">AI ChatBot</h1>
+      <p class="text-4xl mb-4">次世代のカスタマーサポートを実現</p>
+      <p class="text-3xl text-blue-100">ビジネスの成長を加速させるAIチャットボットサービス</p>
+      <div class="absolute bottom-8 right-12 text-2xl text-white opacity-70">1/5</div>
+    </div>
+
+    <!-- 概要スライド -->
+    <div class="slide w-[1920px] h-[1080px] bg-white p-16 mb-8 relative">
+      <div class="absolute bottom-8 right-12 text-2xl text-gray-500">2/5</div>
+      <h2 class="text-6xl font-bold text-gray-800 mb-12 border-b-4 border-blue-600 pb-4">サービス概要</h2>
+      <div class="grid grid-cols-2 gap-12">
+        <div class="space-y-8">
+          <div class="bg-blue-50 p-8 rounded-xl">
+            <h3 class="text-4xl font-semibold text-blue-700 mb-4">🤖 AI技術による自動応答</h3>
+            <p class="text-2xl text-gray-700 leading-relaxed">
+              最新のGPT技術を活用し、人間のような自然な会話を実現。顧客満足度を大幅に向上させます。
+            </p>
+          </div>
+          <div class="bg-purple-50 p-8 rounded-xl">
+            <h3 class="text-4xl font-semibold text-purple-700 mb-4">⚡ 24時間365日対応</h3>
+            <p class="text-2xl text-gray-700 leading-relaxed">
+              営業時間外でも即座に顧客対応が可能。機会損失を防ぎ、売上向上に貢献します。
+            </p>
+          </div>
+        </div>
+        <div class="space-y-8">
+          <div class="bg-green-50 p-8 rounded-xl">
+            <h3 class="text-4xl font-semibold text-green-700 mb-4">📊 データ分析機能</h3>
+            <p class="text-2xl text-gray-700 leading-relaxed">
+              顧客の問い合わせ内容を分析し、ビジネスインサイトを提供。サービス改善に活用できます。
+            </p>
+          </div>
+          <div class="bg-orange-50 p-8 rounded-xl">
+            <h3 class="text-4xl font-semibold text-orange-700 mb-4">🔧 簡単導入</h3>
+            <p class="text-2xl text-gray-700 leading-relaxed">
+              わずか3ステップで導入完了。専門知識不要で、すぐにご利用いただけます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 料金スライド -->
+    <div class="slide w-[1920px] h-[1080px] bg-gradient-to-br from-gray-50 to-blue-50 p-16 mb-8 relative">
+      <div class="absolute bottom-8 right-12 text-2xl text-gray-600">3/5</div>
+      <h2 class="text-6xl font-bold text-gray-800 mb-12 border-b-4 border-blue-600 pb-4">料金プラン</h2>
+      <div class="grid grid-cols-3 gap-8">
+        <!-- スタータープラン -->
+        <div class="bg-white rounded-2xl shadow-xl p-10 border-2 border-gray-200 hover:border-blue-500 transition-all">
+          <div class="text-center mb-8">
+            <h3 class="text-4xl font-bold text-gray-700 mb-2">スターター</h3>
+            <p class="text-gray-500 text-2xl">小規模ビジネス向け</p>
+          </div>
+          <div class="text-center mb-8">
+            <p class="text-6xl font-bold text-blue-600">¥9,800</p>
+            <p class="text-2xl text-gray-500 mt-2">/月</p>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start text-2xl">
+              <span class="text-green-500 mr-3 text-3xl">✓</span>
+              <span>月間1,000件まで対応</span>
+            </li>
+            <li class="flex items-start text-2xl">
+              <span class="text-green-500 mr-3 text-3xl">✓</span>
+              <span>基本的なカスタマイズ</span>
+            </li>
+            <li class="flex items-start text-2xl">
+              <span class="text-green-500 mr-3 text-3xl">✓</span>
+              <span>メールサポート</span>
+            </li>
+            <li class="flex items-start text-2xl">
+              <span class="text-green-500 mr-3 text-3xl">✓</span>
+              <span>基本レポート機能</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ビジネスプラン -->
+        <div
+          class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-10 border-4 border-yellow-400 transform scale-105"
+        >
+          <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+            <span class="bg-yellow-400 text-gray-800 px-6 py-2 rounded-full text-2xl font-bold">人気No.1</span>
+          </div>
+          <div class="text-center mb-8">
+            <h3 class="text-4xl font-bold text-white mb-2">ビジネス</h3>
+            <p class="text-blue-100 text-2xl">成長企業向け</p>
+          </div>
+          <div class="text-center mb-8">
+            <p class="text-6xl font-bold text-white">¥29,800</p>
+            <p class="text-2xl text-blue-100 mt-2">/月</p>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start text-2xl text-white">
+              <span class="text-yellow-300 mr-3 text-3xl">✓</span>
+              <span>月間10,000件まで対応</span>
+            </li>
+            <li class="flex items-start text-2xl text-white">
+              <span class="text-yellow-300 mr-3 text-3xl">✓</span>
+              <span>高度なカスタマイズ</span>
+            </li>
+            <li class="flex items-start text-2xl text-white">
+              <span class="text-yellow-300 mr-3 text-3xl">✓</span>
+              <span>優先チャットサポート</span>
+            </li>
+            <li class="flex items-start text-2xl text-white">
+              <span class="text-yellow-300 mr-3 text-3xl">✓</span>
+              <span>AI学習機能</span>
+            </li>
+            <li class="flex items-start text-2xl text-white">
+              <span class="text-yellow-300 mr-3 text-3xl">✓</span>
+              <span>詳細分析レポート</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- エンタープライズプラン -->
+        <div
+          class="bg-white rounded-2xl shadow-xl p-10 border-2 border-gray-200 hover:border-purple-500 transition-all"
+        >
+          <div class="text-center mb-8">
+            <h3 class="text-4xl font-bold text-gray-700 mb-2">エンタープライズ</h3>
+            <p class="text-gray-500 text-2xl">大企業向け</p>
+          </div>
+          <div class="text-center mb-8">
+            <p class="text-5xl font-bold text-purple-600">お問い合わせ</p>
+            <p class="text-2xl text-gray-500 mt-2">カスタム価格</p>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start text-2xl">
+              <span class="text-green-500 mr-3 text-3xl">✓</span>
+              <span>無制限対応</span>
+            </li>
+            <li class="flex items-start text-2xl">
+              <span class="text-green-500 mr-3 text-3xl">✓</span>
+              <span>完全カスタマイズ</span>
+            </li>
+            <li class="flex items-start text-2xl">
+              <span class="text-green-500 mr-3 text-3xl">✓</span>
+              <span>専任サポート担当</span>
+            </li>
+            <li class="flex items-start text-2xl">
+              <span class="text-green-500 mr-3 text-3xl">✓</span>
+              <span>オンプレミス対応</span>
+            </li>
+            <li class="flex items-start text-2xl">
+              <span class="text-green-500 mr-3 text-3xl">✓</span>
+              <span>SLA保証</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 機能スライド -->
+    <div class="slide w-[1920px] h-[1080px] bg-white p-16 mb-8 relative">
+      <div class="absolute bottom-8 right-12 text-2xl text-gray-500">4/5</div>
+      <h2 class="text-6xl font-bold text-gray-800 mb-12 border-b-4 border-blue-600 pb-4">主な機能</h2>
+      <div class="grid grid-cols-2 gap-x-16 gap-y-10">
+        <div class="flex items-start space-x-6">
+          <div class="text-6xl">🧠</div>
+          <div>
+            <h3 class="text-4xl font-bold text-gray-800 mb-3">高度な自然言語処理</h3>
+            <p class="text-2xl text-gray-600 leading-relaxed">
+              最新のAI技術により、複雑な質問にも的確に回答。文脈を理解した会話が可能です。
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-6">
+          <div class="text-6xl">🔗</div>
+          <div>
+            <h3 class="text-4xl font-bold text-gray-800 mb-3">既存システム連携</h3>
+            <p class="text-2xl text-gray-600 leading-relaxed">
+              CRM、EC、予約システムなど、既存の業務システムとシームレスに連携できます。
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-6">
+          <div class="text-6xl">🌍</div>
+          <div>
+            <h3 class="text-4xl font-bold text-gray-800 mb-3">多言語対応</h3>
+            <p class="text-2xl text-gray-600 leading-relaxed">
+              日本語、英語、中国語など20言語以上に対応。グローバルビジネスを支援します。
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-6">
+          <div class="text-6xl">📱</div>
+          <div>
+            <h3 class="text-4xl font-bold text-gray-800 mb-3">マルチチャネル対応</h3>
+            <p class="text-2xl text-gray-600 leading-relaxed">
+              Webサイト、LINE、Facebook Messenger、Slackなど、複数のチャネルで利用可能です。
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-6">
+          <div class="text-6xl">📈</div>
+          <div>
+            <h3 class="text-4xl font-bold text-gray-800 mb-3">リアルタイム分析</h3>
+            <p class="text-2xl text-gray-600 leading-relaxed">
+              会話履歴をリアルタイムで分析。顧客ニーズを即座に把握し、サービス改善に活用できます。
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-6">
+          <div class="text-6xl">🎨</div>
+          <div>
+            <h3 class="text-4xl font-bold text-gray-800 mb-3">デザインカスタマイズ</h3>
+            <p class="text-2xl text-gray-600 leading-relaxed">
+              ブランドイメージに合わせて、チャットボットの外観を自由にカスタマイズ可能です。
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-6">
+          <div class="text-6xl">🔐</div>
+          <div>
+            <h3 class="text-4xl font-bold text-gray-800 mb-3">高度なセキュリティ</h3>
+            <p class="text-2xl text-gray-600 leading-relaxed">ISO27001準拠。個人情報や機密データを安全に保護します。</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-6">
+          <div class="text-6xl">🎯</div>
+          <div>
+            <h3 class="text-4xl font-bold text-gray-800 mb-3">シナリオ設計</h3>
+            <p class="text-2xl text-gray-600 leading-relaxed">
+              ノーコードエディタで簡単にシナリオを作成。業務フローに合わせた対応が可能です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 導入事例スライド -->
+    <div class="slide w-[1920px] h-[1080px] bg-gradient-to-br from-blue-50 to-purple-50 p-16 mb-8 relative">
+      <div class="absolute bottom-8 right-12 text-2xl text-gray-600">5/5</div>
+      <h2 class="text-6xl font-bold text-gray-800 mb-12 border-b-4 border-blue-600 pb-4">導入事例</h2>
+      <div class="space-y-8">
+        <!-- 事例1 -->
+        <div class="bg-white rounded-2xl shadow-lg p-10">
+          <div class="flex items-start space-x-8">
+            <div class="flex-shrink-0">
+              <div class="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center text-5xl">🏪</div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-4xl font-bold text-gray-800 mb-3">A社（大手ECサイト）</h3>
+              <p class="text-2xl text-gray-600 mb-4">
+                導入前の課題：カスタマーサポートの人件費が高騰。夜間・休日の対応ができず、顧客満足度が低下。
+              </p>
+              <p class="text-2xl text-blue-700 font-semibold mb-3">導入後の効果：</p>
+              <ul class="grid grid-cols-3 gap-4 text-2xl">
+                <li class="flex items-center">
+                  <span class="text-green-500 mr-2 text-3xl">✓</span>問い合わせ対応コスト<span
+                    class="text-red-600 font-bold mx-2"
+                    >60%削減</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-500 mr-2 text-3xl">✓</span>顧客満足度<span
+                    class="text-blue-600 font-bold mx-2"
+                    >35%向上</span
+                  >
+                </li>
+                <li class="flex items-center"><span class="text-green-500 mr-2 text-3xl">✓</span>24時間対応を実現</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 事例2 -->
+        <div class="bg-white rounded-2xl shadow-lg p-10">
+          <div class="flex items-start space-x-8">
+            <div class="flex-shrink-0">
+              <div class="w-32 h-32 bg-green-100 rounded-full flex items-center justify-center text-5xl">🏥</div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-4xl font-bold text-gray-800 mb-3">B病院（総合病院）</h3>
+              <p class="text-2xl text-gray-600 mb-4">
+                導入前の課題：予約受付の電話が集中し、回線がパンク。患者の待ち時間が長く、スタッフの負担も増大。
+              </p>
+              <p class="text-2xl text-blue-700 font-semibold mb-3">導入後の効果：</p>
+              <ul class="grid grid-cols-3 gap-4 text-2xl">
+                <li class="flex items-center">
+                  <span class="text-green-500 mr-2 text-3xl">✓</span>電話対応時間<span
+                    class="text-red-600 font-bold mx-2"
+                    >70%削減</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-500 mr-2 text-3xl">✓</span>予約完了率<span
+                    class="text-blue-600 font-bold mx-2"
+                    >50%向上</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-500 mr-2 text-3xl">✓</span>スタッフ満足度も改善
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 事例3 -->
+        <div class="bg-white rounded-2xl shadow-lg p-10">
+          <div class="flex items-start space-x-8">
+            <div class="flex-shrink-0">
+              <div class="w-32 h-32 bg-purple-100 rounded-full flex items-center justify-center text-5xl">🏢</div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-4xl font-bold text-gray-800 mb-3">C社（不動産会社）</h3>
+              <p class="text-2xl text-gray-600 mb-4">
+                導入前の課題：物件問い合わせが多く、営業スタッフが対応に追われ、商談時間が確保できない。
+              </p>
+              <p class="text-2xl text-blue-700 font-semibold mb-3">導入後の効果：</p>
+              <ul class="grid grid-cols-3 gap-4 text-2xl">
+                <li class="flex items-center">
+                  <span class="text-green-500 mr-2 text-3xl">✓</span>初期問い合わせの<span
+                    class="text-blue-600 font-bold mx-2"
+                    >80%自動化</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-500 mr-2 text-3xl">✓</span>成約率<span class="text-blue-600 font-bold mx-2"
+                    >25%向上</span
+                  >
+                </li>
+                <li class="flex items-center"><span class="text-green-500 mr-2 text-3xl">✓</span>営業効率が大幅改善</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <button
       id="export-btn"
