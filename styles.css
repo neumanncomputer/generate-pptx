@@ -1,0 +1,34 @@
+/* フォント設定 */
+body {
+  font-family: 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+}
+
+/* すべてのテキスト要素にメイリオを適用 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+div,
+button {
+  font-family: 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+}
+
+/* スライドのスムーズな表示 */
+.slide {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* カスタムスタイル */
+.slide h1 {
+  letter-spacing: 0.05em;
+}
+
+.slide h2 {
+  letter-spacing: 0.03em;
+}
