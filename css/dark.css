@@ -94,7 +94,7 @@
   }
 
   .bg-purple-50 {
-    background-color: #e5e7eb !important;
+    background-color: var(--bg-dark-pale) !important;
   }
 
   .bg-blue-100 {
