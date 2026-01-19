@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-dark: #1f2937;
+    --primary-dark-darker: #111827;
+    --primary-dark-light: #374151;
+    --accent-dark: #4b5563;
+    --bg-dark-light: #6b7280;
+    --bg-dark-pale: #d1d5db;
+    --text-dark: #111827;
+    --text-dark-light: #374151;
+  }
+
+  body {
+    @apply font-sans;
+    font-family: 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  li,
+  div,
+  button {
+    font-family: 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+  }
+}
+
+@layer components {
+  /* スライド基本スタイル */
+  .slide {
+    @apply bg-white;
+    box-shadow: 0 4px 6px rgba(31, 41, 55, 0.15);
+  }
+
+  .slide h1 {
+    @apply tracking-wider;
+    color: var(--primary-dark-darker);
+  }
+
+  .slide h2 {
+    @apply tracking-wide;
+    color: var(--text-dark);
+  }
+
+  /* グラデーション背景のダーク化 */
+  .bg-gradient-to-br.from-blue-600 {
+    background-image: linear-gradient(to bottom right, var(--primary-dark), var(--accent-dark)) !important;
+  }
+
+  .bg-gradient-to-br.from-gray-50.to-blue-50 {
+    background-image: linear-gradient(to bottom right, #f9fafb, var(--bg-dark-pale)) !important;
+  }
+
+  .bg-gradient-to-br.from-blue-50.to-purple-50 {
+    background-image: linear-gradient(to bottom right, var(--bg-dark-pale), var(--bg-dark-light)) !important;
+  }
+
+  .bg-gradient-to-br.from-blue-600.to-purple-600 {
+    background-image: linear-gradient(to bottom right, var(--primary-dark), var(--accent-dark)) !important;
+  }
+
+  /* ボーダーカラーのダーク化 */
+  .border-blue-600 {
+    border-color: var(--primary-dark) !important;
+  }
+
+  /* テキストカラーのダーク化 */
+  .text-blue-600,
+  .text-blue-700 {
+    color: var(--text-dark) !important;
+  }
+
+  .text-blue-100 {
+    color: var(--bg-dark-light) !important;
+  }
+
+  .text-purple-700,
+  .text-purple-600 {
+    color: var(--primary-dark-darker) !important;
+  }
+
+  /* 背景カラーのダーク化 */
+  .bg-blue-50 {
+    background-color: var(--bg-dark-pale) !important;
+  }
+
+  .bg-purple-50 {
+    background-color: #e5e7eb !important;
+  }
+
+  .bg-blue-100 {
+    background-color: var(--bg-dark-light) !important;
+  }
+
+  /* ボタンスタイルのダーク化 */
+  #export-btn {
+    @apply transition-all duration-300;
+    background-color: var(--primary-dark) !important;
+  }
+
+  #export-btn:hover {
+    @apply -translate-y-0.5;
+    background-color: var(--primary-dark-darker) !important;
+    box-shadow: 0 6px 12px rgba(31, 41, 55, 0.3);
+  }
+
+  /* 料金プランカードのダーク化 */
+  .border-yellow-400 {
+    border-color: var(--primary-dark-light) !important;
+  }
+
+  .bg-yellow-400 {
+    background-color: var(--primary-dark-light) !important;
+  }
+
+  .text-yellow-300 {
+    color: #9ca3af !important;
+  }
+
+  /* ホバー効果のダーク化 */
+  .hover\:border-blue-500:hover {
+    border-color: var(--primary-dark) !important;
+  }
+
+  .hover\:border-purple-500:hover {
+    border-color: var(--accent-dark) !important;
+  }
+
+  /* フォーカススタイルのダーク化 */
+  .focus\:ring-indigo-500:focus {
+    --tw-ring-color: var(--primary-dark) !important;
+  }
+
+  .focus\:border-indigo-500:focus {
+    border-color: var(--primary-dark) !important;
+  }
+
+  /* セレクトボックスのダーク化 */
+  #theme-selector {
+    border-color: var(--bg-dark-light);
+  }
+
+  #theme-selector:focus {
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 0 3px rgba(31, 41, 55, 0.1);
+  }
+}

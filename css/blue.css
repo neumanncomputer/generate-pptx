@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-blue: #3b82f6;
+    --primary-blue-dark: #2563eb;
+    --primary-blue-light: #60a5fa;
+    --accent-blue: #1d4ed8;
+    --bg-blue-light: #dbeafe;
+    --bg-blue-pale: #eff6ff;
+    --text-blue: #1e40af;
+    --text-blue-light: #3b82f6;
+  }
+
+  body {
+    @apply font-sans;
+    font-family: 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  li,
+  div,
+  button {
+    font-family: 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+  }
+}
+
+@layer components {
+  /* スライド基本スタイル */
+  .slide {
+    @apply bg-white;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.15);
+  }
+
+  .slide h1 {
+    @apply tracking-wider;
+    color: var(--primary-blue-dark);
+  }
+
+  .slide h2 {
+    @apply tracking-wide;
+    color: var(--text-blue);
+  }
+
+  /* グラデーション背景の青化 */
+  .bg-gradient-to-br.from-blue-600 {
+    background-image: linear-gradient(to bottom right, var(--primary-blue), var(--accent-blue)) !important;
+  }
+
+  .bg-gradient-to-br.from-gray-50.to-blue-50 {
+    background-image: linear-gradient(to bottom right, #f9fafb, var(--bg-blue-pale)) !important;
+  }
+
+  .bg-gradient-to-br.from-blue-50.to-purple-50 {
+    background-image: linear-gradient(to bottom right, var(--bg-blue-pale), var(--bg-blue-light)) !important;
+  }
+
+  .bg-gradient-to-br.from-blue-600.to-purple-600 {
+    background-image: linear-gradient(to bottom right, var(--primary-blue), var(--accent-blue)) !important;
+  }
+
+  /* ボーダーカラーの青化 */
+  .border-blue-600 {
+    border-color: var(--primary-blue) !important;
+  }
+
+  /* テキストカラーの青化 */
+  .text-blue-600,
+  .text-blue-700 {
+    color: var(--text-blue) !important;
+  }
+
+  .text-blue-100 {
+    color: var(--bg-blue-light) !important;
+  }
+
+  .text-purple-700,
+  .text-purple-600 {
+    color: var(--primary-blue-dark) !important;
+  }
+
+  /* 背景カラーの青化 */
+  .bg-blue-50 {
+    background-color: var(--bg-blue-pale) !important;
+  }
+
+  .bg-purple-50 {
+    background-color: #eff6ff !important;
+  }
+
+  .bg-blue-100 {
+    background-color: var(--bg-blue-light) !important;
+  }
+
+  /* ボタンスタイルの青化 */
+  #export-btn {
+    @apply transition-all duration-300;
+    background-color: var(--primary-blue) !important;
+  }
+
+  #export-btn:hover {
+    @apply -translate-y-0.5;
+    background-color: var(--primary-blue-dark) !important;
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  /* 料金プランカードの青化 */
+  .border-yellow-400 {
+    border-color: var(--primary-blue-light) !important;
+  }
+
+  .bg-yellow-400 {
+    background-color: var(--primary-blue-light) !important;
+  }
+
+  .text-yellow-300 {
+    color: #93c5fd !important;
+  }
+
+  /* ホバー効果の青化 */
+  .hover\:border-blue-500:hover {
+    border-color: var(--primary-blue) !important;
+  }
+
+  .hover\:border-purple-500:hover {
+    border-color: var(--accent-blue) !important;
+  }
+
+  /* フォーカススタイルの青化 */
+  .focus\:ring-indigo-500:focus {
+    --tw-ring-color: var(--primary-blue) !important;
+  }
+
+  .focus\:border-indigo-500:focus {
+    border-color: var(--primary-blue) !important;
+  }
+
+  /* セレクトボックスの青化 */
+  #theme-selector {
+    border-color: var(--bg-blue-light);
+  }
+
+  #theme-selector:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+}
